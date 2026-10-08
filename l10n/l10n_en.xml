@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <texts>
+        <text name="input_SPEEDLIMITER_TOGGLE" text="Speed limit on/off"/>
+        <text name="input_SPEEDLIMITER_UP" text="Increase speed limit"/>
+        <text name="input_SPEEDLIMITER_DOWN" text="Decrease speed limit"/>
+        <text name="input_SPEEDLIMITER_MOUSE" text="Mouse cursor on/off (move speed limit HUD)"/>
+        <text name="speedlimiter_unit" text="KPH"/>
+        <text name="speedlimiter_editHint" text="Drag to move"/>
+    </texts>
+</l10n>

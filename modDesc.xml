@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="113">
+    <author>Ole_sch</author>
+    <version>1.0.0.0</version>
+
+    <title>
+        <de>Begrenzung Des Fahrpedals</de>
+        <en>Speed Limiter</en>
+    </title>
+
+    <description>
+        <de>
+		<![CDATA[Begrenzt die Beschleunigung des Fahrbedals auf einen einstellbaren km/h-Wert wie es bei den Fendt Vario Schleppern möglich ist.
+
+Diese Funktion ermöglicht es, die gewünschte Fahrgeschwindigkeit mithilfe des Fahrpedals in Kombination mit Lenkrad und Pedalen feinfühliger einzustellen. Besonders hilfreich ist dies beim Nebenherfahren eines Häckslers oder Mähdreschers.
+
+Die Geschwindigkeitsbegrenzung kann Standardmäßig mit STRG + 1 verringert und mit STRG + 2 erhöht werden. Die maximale Geschwindigkeit des Fahrzeugs bildet dabei die obere Grenze.
+
+Mit STRG + 3 lässt sich die Geschwindigkeitsbegrenzung Standardmäßig aktivieren bzw. deaktivieren.
+
+Alle Einstellungen werden in einem kleinen HUD visualisiert, das sich frei per Maus verschieben lässt. Um den Verschiebungsmodus zu aktivieren, muss die mittlere Maustaste gedrückt werden.
+Im HUD wird die eingestellte Geschwindigkeitsbegrenzung angezeigt. Sobald der Begrenzer aktiv ist, werden das Symbol und die Geschwindigkeitsanzeige grün dargestellt.
+
+Alle Tastenbelegungen können in den Einstellungen frei angepasst werden.
+
+Hinweis: Der Tempomat bleibt von dieser Funktion unberührt und kann weiterhin wie gewohnt genutzt werden.
+         
+Multiplayer wird unterstützt.
+
+Feedback und Fehlerberichte auf GitHub:https://github.com/0lesch/FS25_SpeedLimiter/issues
+]]>
+        </de>
+        <en>
+		<![CDATA[Limits the acceleration of the drive pedal to an adjustable speed (km/h) value, similar to the functionality found in Fendt Vario tractors.
+
+This function allows for more precise control of the driving speed when using the drive pedal in conjunction with the steering wheel and pedals. It is particularly useful when driving alongside a forage harvester or combine harvester.
+
+By default, the speed limit can be decreased using Ctrl + 1 and increased using Ctrl + 2. The vehicle's maximum speed serves as the upper limit.
+
+The speed limit can be toggled on or off using Ctrl + 3 (default setting).
+
+All settings are displayed in a small HUD that can be freely repositioned using the mouse. To activate the repositioning mode, press the middle mouse button.
+The set speed limit is displayed in the HUD. Once the limiter is active, the symbol and the speed display appear in green.
+
+All key bindings can be customized in the settings.
+
+Note: The cruise control remains unaffected by this function and can continue to be used as usual.
+
+Multiplayer is supported.
+
+Feedback and bug reports on GitHub:https://github.com/0lesch/FS25_SpeedLimiter/issues
+]]>
+        </en>
+    </description>
+	<multiplayer supported="true"/>
+    <iconFilename>icon_SpeedLimiter.dds</iconFilename>
+    <l10n filenamePrefix="l10n/l10n"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/SpeedLimiterEvent.lua"/>
+        <sourceFile filename="scripts/SpeedLimiterRegister.lua"/>
+        <sourceFile filename="scripts/SpeedLimiterHud.lua"/>
+    </extraSourceFiles>
+
+    <specializations>
+        <specialization name="speedLimiter" className="SpeedLimiter" filename="scripts/SpeedLimiter.lua"/>
+    </specializations>
+
+    <actions>
+        <action name="SPEEDLIMITER_TOGGLE" category="VEHICLE"/>
+        <action name="SPEEDLIMITER_UP" category="VEHICLE"/>
+        <action name="SPEEDLIMITER_DOWN" category="VEHICLE"/>
+        <action name="SPEEDLIMITER_MOUSE" category="VEHICLE"/>
+    </actions>
+
+    <inputBinding>
+        <actionBinding action="SPEEDLIMITER_TOGGLE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_3"/>
+        </actionBinding>
+        <actionBinding action="SPEEDLIMITER_UP">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_1"/>
+        </actionBinding>
+        <actionBinding action="SPEEDLIMITER_DOWN">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_2"/>
+        </actionBinding>
+        <actionBinding action="SPEEDLIMITER_MOUSE">
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_MIDDLE"/>
+        </actionBinding>
+    </inputBinding>
+</modDesc>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <texts>
+        <text name="input_SPEEDLIMITER_TOGGLE" text="Tempolimit ein/aus"/>
+        <text name="input_SPEEDLIMITER_UP" text="Tempolimit erhöhen"/>
+        <text name="input_SPEEDLIMITER_DOWN" text="Tempolimit verringern"/>
+        <text name="input_SPEEDLIMITER_MOUSE" text="Mauszeiger ein/aus (Tempolimit-HUD verschieben)"/>
+        <text name="speedlimiter_unit" text="km/h"/>
+        <text name="speedlimiter_editHint" text="Ziehen zum Verschieben"/>
+    </texts>
+</l10n>
